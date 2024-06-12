@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentytech</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-button button,
+.auth-buttons button {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#log{
+    background-color: #ff6600;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo .ri {
+    font-size: 24px;
+    color: #ff6600;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 100px;
+    margin: auto auto;
+    font-family: 'Times New Roman';
+} 
+
+.image-stack {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    top: -60px;
+}
+
+.image-stack img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    position: absolute; 
+    border-radius: 5px;
+    
+}
+
+#img1{
+    transform: translate(5%, 0%) rotate(-40deg);
+    transition: all ease 0.3s;
+}
+
+#img2{
+    transform: translate(5%, 0%) rotate(-30deg);
+    transition: all ease 0.3s;
+}
+
+#img3{
+    transform: translate(5%, 0%) rotate(-20deg);
+    transition: all ease 0.3s;
+}
+
+#img4{
+    transform: translate(5%, 0%) rotate(-10deg);
+    transition: all ease 0.3s;
+}
+
+.image-stack:hover img {
+    position: static;
+    transform: rotate(0deg);
+}
+
+.image-stack:hover {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* Footer Styles */
+footer {
+    padding: 10px 20px;
+    
+}
+
+footer #p-u {
+    margin: 5px 0;
+    text-align: left;
+}
+
+footer #p-d {
+    margin: 5px 0;
+    text-align: right;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin: 10px 20px;
+}
+
+.social-icons .ri {
+    font-size: 24px;
+    color: #ff6600;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-button">
+            <button>MENU</button>
+            <i class="ri-menu-2-line"></i>
+        </div>
+        <div class="logo">
+            <i class=" ri ri-tooth-line"></i>
+            <h1>DENTYTECH</h1>
+        </div>
+        <div class="auth-buttons">
+            <button>signup</button>
+            <button id="log">login</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>Our Advantages</h2>
+            <div class="image-stack">
+                <img id="img1" src="1.jpg" alt="Image 1">
+                <img id="img2" src="4.jpg" alt="Image 2">
+                <img id="img3" src="5.jpg" alt="Image 3">
+                <img id="img4" src="9.jpg" alt="Image 4">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p id="p-u">Your smile, our position</p>
+        <div class="social-icons">
+            <i class=" ri ri-facebook-circle-fill"></i>
+            <i class=" ri ri-instagram-line"></i>
+            <i class=" ri ri-youtube-line"></i>
+        </div>
+        <p id="p-d">Best startup of 2023</p>
+    </footer>
+</body>
+</html>
