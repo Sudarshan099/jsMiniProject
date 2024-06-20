@@ -5,34 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav Bar</title>
     <style>
-        .main-div{
+        .main-div {
             display: flex;
-            background-color: black;
+            background-color: #031d35;
             justify-content: space-between;
             align-items: center;
+            border-radius: 10px;
+            /* padding: 10px; */
         }
 
-        .logo img{
-            margin-left: 30px;
+        .logo img {
+            margin-left: 10px;
             padding: 5px;
             width: 60px;
             height: 60px;
             border-radius: 10px;
         }
 
-        .center-ele {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style-type: none;
-        }
-
-        .center-ele li a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: white;
-        }
-
+        .center-ele,
         .last-ele {
             display: flex;
             justify-content: center;
@@ -40,12 +30,67 @@
             list-style-type: none;
         }
 
+        .center-ele li a,
         .last-ele li a {
             margin: 0 20px;
             text-decoration: none;
             color: white;
         }
 
+        .menu-btn {
+            display: none;
+            background-color: white;
+            color: black;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #011222;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .center-ele,
+            .last-ele {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -54,7 +99,7 @@
             <img src="logo2.png" alt="logo">
         </div>
         <div>
-            <ul class=" center-ele">
+            <ul class="center-ele">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about us">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -64,11 +109,28 @@
             <ul class="last-ele">
                 <li><a href="#login">Login</a></li>
                 <li><a href="# Sign Up">Sign Up</a></li>
-                
             </ul>
         </div>
-
+        <button class="menu-btn" onclick="openSidebar()">☰</button>
     </div>
-    
+
+    <div id="mySidebar" class="sidebar">
+        <a href="" class="close-btn" onclick="closeSidebar()">×</a>
+        <a href="#home">Home</a>
+        <a href="#about us">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#login">Login</a>
+        <a href="# Sign Up">Sign Up</a>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
 </body>
 </html>

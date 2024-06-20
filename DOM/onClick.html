@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .form h2{
+            text-align: center;
+        }
+        .form {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            padding: 15px 30px;
+            margin-left: 500px;
+            border: 1px solid gray;
+            width: 250px
+        }
+
+        .form form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px; ;
+        }
+
+        .form button{
+            background-color: blue;
+            text-align: center;
+            margin-top: 10px;
+            height: 30px;
+        }
+
+        .fa {
+            position: absolute;
+            margin-left: 222px;
+            margin-top: 151px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>JavaScript Html Events</h2>
+    <p>click the button to dispaly the date </p>
+    <button onClick={displayDate()}>the time is?</button>
+    <p id="demo"></p>
+
+    <!-- <button onClick={changeColor()}>Change Color?</button>
+    <p id="demo2"></p> -->
+
+    <button id="btn"  onclick="{buttonClick()}">Click</button>
+    <p id="demo3"></p>
+
+    <div class="form">
+        <h2> Register </h2>
+        <form>
+            <label for="Username">Username</label> 
+            <input type="text"> 
+            <label for="Email">Email</label>
+            <input type="text">
+            <label for="Password">Password</label>
+            <input type="text">
+            <i class="fa fa-eye-slash"></i>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <script>
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        // function changeColor(){
+        //     document.getElementById("demo2").
+        // }
+
+        function buttonClick(){
+            buttonElement.addEventListner('click',function() {
+            console.log("Button Clicked")
+        })
+
+        }
+       
+
+
+    </script>
+</body>
+</html>
